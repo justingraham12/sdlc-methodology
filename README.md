@@ -4,54 +4,88 @@ A living, version-controlled methodology for building and delivering software in
 world where code generation is cheap and the binding constraints have moved to
 **specification, verification, and integration**.
 
-## The reframe
+This README is the root: it states the reframe everything hangs off, explains how
+the repo is organized, indexes the principles and practices, and describes how we
+evolve the methodology.
 
-For decades, writing code was the bottleneck, and most inherited practice
-(specialized roles, story points, sprint time-boxing, heavyweight frameworks) is
-machinery for managing the cost of producing code. Agents collapse that cost
-toward zero, so the constraint moves to three places:
+## The reframe (the lens for everything here)
 
-- **Specification:** knowing precisely what to build.
-- **Verification:** trusting that what got built is correct and safe to own.
-- **Integration:** keeping many fast, locally-correct changes globally coherent.
+For decades, writing code was the bottleneck, and almost every practice we
+inherited (specialized SDLC roles, story-point estimation, sprint time-boxing,
+heavyweight coordination frameworks) is machinery built to manage the scarcity and
+cost of producing code.
 
-Every document here is downstream of that single shift.
+Agents collapse the cost of generation toward zero. So the constraint **moves**.
+It moves to:
+
+- **Specification.** Knowing precisely what to build.
+- **Verification.** Trusting that what got built is correct and safe to own.
+- **Integration.** Keeping many fast, locally-correct changes globally coherent.
+
+Every principle in this repo is downstream of this single shift. When in doubt,
+ask: *does this practice relieve the new constraint, or is it machinery for the
+old one?*
 
 ## How this repo is organized
 
-- **Principles** are the durable *why*. They change slowly and only with good
-  reason.
-- **Practices** are the swappable *how*. They implement principles and are
-  expected to be iterated, replaced, or retired as we learn.
+- **Principles** (`principles/`) are the durable *why*. They change slowly and
+  only with good reason. Each principle is its own file with a **stable canonical
+  number** (`§1`, `§2`, ...). Numbers are never reused or reordered; new
+  principles only append. This keeps every cross-reference (including from the
+  practice docs) valid forever, independent of reading order.
+- **Practices** (`practices/`) are the swappable *how*. They implement principles
+  and are expected to be iterated, replaced, or retired as we learn. Practices are
+  a catalog with no inherent order, so they are named by slug rather than numbered.
 
 When a practice and a principle conflict, either the principle wins or the
 principle is wrong. Decide which, explicitly.
 
-## Contents
+## Principles
 
-- [`ai-augmented-delivery-principles.md`](ai-augmented-delivery-principles.md):
-  the core principles (the spine). Covers roles (builder + verifier, the intent
-  roles, the architect), pairing, the verification bottleneck, flow over
-  ceremony, durable specs, and metrics.
-- [`practices/spec-acceptance-gate.md`](practices/spec-acceptance-gate.md):
-  the working-wireframe spec-acceptance gate. Implements principles §1b and
-  produces the acceptance criteria that feed the §3 verification gate.
-- [`practices/pr-review-gate.md`](practices/pr-review-gate.md):
-  the pull-request review gate (change acceptance). Implements principles §3 and
-  closes the verification spine by confirming the build against the acceptance
-  criteria set at the spec-acceptance gate.
+| # | Principle | File |
+|---|-----------|------|
+| §1 | Roles (builder + verifier, intent roles, architect) | [`principles/01-roles.md`](principles/01-roles.md) |
+| §2 | Pairing: builder + verifier at the terminal | [`principles/02-pairing.md`](principles/02-pairing.md) |
+| §3 | The verification bottleneck | [`principles/03-verification-bottleneck.md`](principles/03-verification-bottleneck.md) |
+| §4 | Process: flow over ceremony | [`principles/04-flow-over-ceremony.md`](principles/04-flow-over-ceremony.md) |
+| §5 | Disposable code, durable specs | [`principles/05-disposable-code-durable-specs.md`](principles/05-disposable-code-durable-specs.md) |
+| §6 | Metrics that match the new constraint | [`principles/06-metrics.md`](principles/06-metrics.md) |
 
-## How we evolve it
+A **lifecycle diagram** showing how the roles engage from inception through
+delivery to maintenance (and where the two gates sit) is in
+[`principles/01-roles.md`](principles/01-roles.md) under §1d.
 
-- **Principles-first.** Keep the *why* attached to every practice; that is what
-  prevents cargo-culting.
+## Practices
+
+| Practice | Implements | File |
+|----------|-----------|------|
+| Working-wireframe spec-acceptance gate | §1a, feeds §3 | [`practices/spec-acceptance-gate.md`](practices/spec-acceptance-gate.md) |
+| Pull-request review gate (change acceptance) | §3, closes the spine from §1a | [`practices/pr-review-gate.md`](practices/pr-review-gate.md) |
+
+The two gates are two ends of one **verification spine**: the spec-acceptance gate
+defines the acceptance criteria before any code exists, and the PR-review gate
+confirms the build against those same criteria at merge.
+
+## How we evolve this methodology
+
+- **Principles-first, practices swappable.** Cargo-culting happens when people
+  adopt the practice and lose the *why*. Keep the why attached.
 - **Run changes as experiments, not rollouts.** One team, one change, a stated
-  hypothesis, a few cycles, then inspect.
-- **Constraints drive the agenda.** Re-run a Theory-of-Constraints pass
-  periodically: a practice earns its place only if it relieves the *current*
-  constraint.
+  hypothesis, a few cycles, then inspect. This is the most XP-consistent way to
+  invent an XP successor.
+- **Constraints, not practices, drive the agenda.** Periodically re-run a
+  Theory-of-Constraints pass: where does work pile up *now*? A practice earns its
+  place only if it relieves the current constraint.
+
+Treat every principle as a hypothesis we are testing in production. Each should
+eventually carry the practice that implements it and the metric that tells us it
+is working.
+
+## Open threads
+
+Active, unresolved work lives in [`OPEN-THREADS.md`](OPEN-THREADS.md). (GitHub
+Issues is the likely long-term home, one thread per issue.)
 
 ## Status
 
-Early draft (principles v0.1, gate practice v0.1). Open threads live in the
-parking lot at the end of the principles doc.
+Early draft (principles and practices at v0.1).
