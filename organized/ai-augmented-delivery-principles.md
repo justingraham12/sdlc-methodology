@@ -291,7 +291,10 @@ Replace generation-era metrics (velocity, story points) with constraint-era ones
 
 - Formalize the builder+verifier pairing practice into a named ritual: role
   definitions, swap protocol, the literacies list (see §2).
-- Define the auditable "risk surface" format for tiered review (see §3).
+- ~~Define the auditable "risk surface" format for tiered review~~: addressed in
+  `practices/pr-review-gate.md` (risk tiering, recorded tier + rationale per PR).
+  Open sub-thread: confirm the tier-to-reviewer-count mapping with the SOC2 owner
+  (see §3).
 - Draft the agent harness / context platform ownership charter (see §1a).
 - Baseline the §6 metrics on one team before changing anything else.
 - ~~Define the **working wireframe spec-acceptance gate** concretely~~: drafted

@@ -29,13 +29,17 @@ principle is wrong. Decide which, explicitly.
 
 ## Contents
 
-- [`ai-augmented-delivery-principles.md`](ai-augmented-delivery-principles.md):
+- [`organized/ai-augmented-delivery-principles.md`](organized/ai-augmented-delivery-principles.md):
   the core principles (the spine). Covers roles (builder + verifier, the intent
   roles, the architect), pairing, the verification bottleneck, flow over
   ceremony, durable specs, and metrics.
-- [`practices/spec-acceptance-gate.md`](practices/spec-acceptance-gate.md): the
-  working-wireframe spec-acceptance gate. Implements principles §1b and produces
-  the acceptance criteria that feed the §3 verification gate.
+- [`organized/practices/spec-acceptance-gate.md`](organized/practices/spec-acceptance-gate.md):
+  the working-wireframe spec-acceptance gate. Implements principles §1b and
+  produces the acceptance criteria that feed the §3 verification gate.
+- [`organized/practices/pr-review-gate.md`](organized/practices/pr-review-gate.md):
+  the pull-request review gate (change acceptance). Implements principles §3 and
+  closes the verification spine by confirming the build against the acceptance
+  criteria set at the spec-acceptance gate.
 
 ## How we evolve it
 
