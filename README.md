@@ -81,6 +81,12 @@ Treat every principle as a hypothesis we are testing in production. Each should
 eventually carry the practice that implements it and the metric that tells us it
 is working.
 
+## Adopting this methodology
+
+Coming from SAFe, Scrum, Kanban, Waterfall, or ad hoc agentic work? The
+[`ADOPTING.md`](ADOPTING.md) guide compares each against this approach and gives
+the first moves for migrating from where you are.
+
 ## Open threads
 
 Active, unresolved work lives in [`OPEN-THREADS.md`](OPEN-THREADS.md). (GitHub
