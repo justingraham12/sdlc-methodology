@@ -50,6 +50,7 @@ principle is wrong. Decide which, explicitly.
 | §4 | Process: flow over ceremony | [`principles/04-flow-over-ceremony.md`](principles/04-flow-over-ceremony.md) |
 | §5 | Disposable code, durable specs | [`principles/05-disposable-code-durable-specs.md`](principles/05-disposable-code-durable-specs.md) |
 | §6 | Metrics that match the new constraint | [`principles/06-metrics.md`](principles/06-metrics.md) |
+| §7 | Agency and scope: engineers own more and drive more value | [`principles/07-agency-and-scope.md`](principles/07-agency-and-scope.md) |
 
 A **lifecycle diagram** showing how the roles engage from inception through
 delivery to maintenance (and where the two gates sit) is in

@@ -146,3 +146,13 @@ This is an evolution, not a repudiation. Carried forward from what you already d
 XP roots and pairing, inspect-and-adapt, small batches, continuous integration and
 delivery, and close collaboration with whoever owns the intent. If your current
 framework already does these well, you are adopting less than you think.
+
+## What you gain over Agile and Kanban
+
+Beyond flow and feedback, which Agile and Kanban already gave you, the real shift
+is in the engineer's agency. Ownership moves from a sliced component to the whole
+outcome, leverage moves from your own hands to a fleet of agents you steer, and
+influence reaches up into what gets built, not only how. See §7
+(`principles/07-agency-and-scope.md`) for the full argument. If you are selling
+this change internally, this is often the part engineers care about most, and it
+is also where the new accountability lands, so present the two together.
